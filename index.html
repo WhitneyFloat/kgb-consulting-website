@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelly Gill-Braxton | Fractional Head of Sales Compensation</title>
+    <meta name="description" content="I design sales compensation systems that align incentives, retain top performers, and turn your revenue targets into reality.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Colors */
+            --bg-warm-off-white: #FAFAF8;
+            --bg-off-white: #F5F4F1;
+            --bg-light-grey: #F0EFEC;
+            --text-primary: #0F0F0F;
+            --text-muted: #737373;
+            --accent-near-black: #1A1A1A;
+            --dark-section-bg: #111111;
+            --dark-section-text: #FFFFFF;
+            --dark-section-muted: #A0A0A0;
+            --border-color: rgba(15, 15, 15, 0.1);
+            
+            /* Gradients */
+            --gradient-pink: #F5C6D0;
+            --gradient-blue: #C6D8F5;
+            --gradient-lavender: #D6C6F5;
+
+            /* Fonts */
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'DM Sans', sans-serif;
+            
+            /* Glass Card Shadows */
+            --glass-shadow: inset 3px 3px 3px 0 rgba(255, 255, 255, 0.45), inset -3px -3px 3px 0 rgba(255, 255, 255, 0.45);
+            --glass-glow: 0 4px 4px rgba(0, 0, 0, 0.15), 0 0 12px rgba(0, 0, 0, 0.08), 0 0 24px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Base Resets */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-warm-off-white);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        a:hover {
+            opacity: 0.7;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+        }
+
+        .label {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-near-black);
+            color: #FFFFFF;
+            border: 1px solid var(--accent-near-black);
+        }
+
+        .btn-primary:hover {
+            opacity: 1;
+            background-color: #333;
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--accent-near-black);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-ghost:hover {
+            opacity: 1;
+            border-color: var(--accent-near-black);
+            transform: translateY(-2px);
+        }
+
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        section {
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        /* Utils */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hidden SVG for filters */
+        .svg-filters {
+            position: absolute;
+            width: 0;
+            height: 0;
+            pointer-events: none;
+        }
+
+        /* -----------------------
+           NAVIGATION
+           ----------------------- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .navbar.scrolled {
+            background: rgba(250, 250, 248, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 5%;
+        }
+
+        .nav-logo {
+            font-family: var(--font-body);
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .nav-logo strong {
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+        
+        .nav-logo span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+
+        .nav-cta {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.8rem;
+            border-radius: 4px;
+        }
+
+        /* -----------------------
+           SECTION 1 - HERO
+           ----------------------- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background-color: var(--bg-warm-off-white);
+            padding-top: 5rem;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3.5rem, 6vw, 5.5rem);
+            margin-bottom: 2rem;
+        }
+
+        .hero-subhead {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            max-width: 90%;
+            font-weight: 300;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-trust {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        /* Iridescent 3D Blob */
+        .hero-visual {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .blob {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: linear-gradient(135deg, var(--gradient-pink), var(--gradient-blue), var(--gradient-lavender));
+            animation: morph 8s ease-in-out infinite, gradient-shift 10s ease infinite;
+            background-size: 200% 200%;
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            box-shadow: inset 20px 20px 40px rgba(255,255,255,0.5), inset -20px -20px 40px rgba(0,0,0,0.1), 0 20px 40px rgba(198, 216, 245, 0.4);
+            transition: all 1s ease-in-out;
+            opacity: 0.9;
+            filter: blur(1px) contrast(1.1);
+        }
+
+        @keyframes morph {
+            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: rotate(0deg) scale(1); }
+            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; transform: rotate(5deg) scale(1.05); }
+            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: rotate(0deg) scale(1); }
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 5%;
+            opacity: 0.5;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* -----------------------
+           SECTION 2 - THE PROBLEM
+           ----------------------- */
+        .problem-section {
+            background-color: #FFFFFF;
+        }
+
+        .cards-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .problem-card {
+            padding: 3.5rem 2.5rem;
+            border: 1px solid var(--border-color);
+            background: #FFFFFF;
+            font-family: var(--font-body);
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.3;
+            letter-spacing: -0.02em;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        .problem-footer {
+            text-align: center;
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+
+        /* -----------------------
+           SECTION 3 - ABOUT
+           ----------------------- */
+        .about-section {
+            background-color: var(--bg-off-white);
+        }
+
+        .about-text {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            line-height: 1.3;
+            max-width: 1000px;
+            margin-bottom: 5rem;
+        }
+
+        .logo-strip {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2.5rem 0;
+            opacity: 0.5;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .logo-item {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+
+        /* -----------------------
+           SECTION 4 - SERVICES (LIQUID GLASS IMPLEMENTATION)
+           ----------------------- */
+        .services-section {
+            background-color: var(--bg-light-grey);
+            position: relative;
+        }
+
+        /* Glass implementation */
+        .glass-card {
+            position: relative;
+            padding: 3.5rem 2.5rem;
+            border: 1px solid rgba(15,15,15,0.08);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.4);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            z-index: 1;
+            /* Default base appearance */
+        }
+        
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            filter: url(#glass-blur); /* The magic SVG noise */
+            z-index: -2;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .glass-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            box-shadow: var(--glass-glow);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .glass-inner-edge {
+            position: absolute;
+            inset: 0;
+            box-shadow: var(--glass-shadow);
+            z-index: -1;
+            opacity: 0;
+            border-radius: 20px;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(26, 26, 26, 0.85);
+            border-color: transparent;
+            color: #FFFFFF;
+        }
+
+        .glass-card:hover::before,
+        .glass-card:hover::after,
+        .glass-card:hover .glass-inner-edge {
+            opacity: 1;
+        }
+
+        .glass-card:hover .service-num,
+        .glass-card:hover .service-tag {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .service-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-num {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-weight: 500;
+            transition: color 0.5s ease;
+        }
+
+        .service-title {
+            font-family: var(--font-body);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .service-desc {
+            font-size: 0.95rem;
+            color: inherit;
+            opacity: 0.8;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .service-tag {
+            margin-top: auto;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: color 0.5s ease;
+        }
+
+        /* -----------------------
+           SECTION 5 - PROOF
+           ----------------------- */
+        .proof-section {
+            background-color: var(--dark-section-bg);
+            color: var(--dark-section-text);
+        }
+
+        .metrics-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin-bottom: 5rem;
+            gap: 2rem;
+        }
+
+        .metric-item {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .metric-val {
+            font-family: var(--font-heading);
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .metric-label {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: var(--dark-section-muted);
+            line-height: 1.4;
+            max-width: 150px;
+        }
+
+        .proof-footer {
+            text-align: center;
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+            font-style: italic;
+            color: var(--dark-section-muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* -----------------------
+           SECTION 6 - SCORECARD CTA
+           ----------------------- */
+        .scorecard-section {
+            background: linear-gradient(90deg, var(--gradient-pink), var(--gradient-blue), var(--gradient-lavender));
+            background-size: 200% 200%;
+            animation: gradient-shift 12s ease infinite;
+            text-align: center;
+            position: relative;
+        }
+
+        .scorecard-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .scorecard-section h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .scorecard-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: rgba(15,15,15,0.8);
+        }
+
+        .scorecard-note {
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: rgba(15,15,15,0.6);
+        }
+
+        /* -----------------------
+           SECTION 7 - LATEST THINKING
+           ----------------------- */
+        .articles-section {
+            background-color: #FFFFFF;
+        }
+
+        .article-card {
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            background: #FFFFFF;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-near-black);
+        }
+
+        .article-card .label {
+            margin-bottom: 2rem;
+        }
+
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .article-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .article-link {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .article-link:hover {
+            gap: 1rem;
+            opacity: 1;
+        }
+
+        /* -----------------------
+           SECTION 8 - CONTACT
+           ----------------------- */
+        .contact-section {
+            background-color: #FFFFFF;
+            padding-top: 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+        }
+
+        .contact-left h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-left p {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            color: var(--text-muted);
+        }
+
+        .trust-signals {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .trust-item svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 2.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .form-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.75rem 0;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-primary);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-bottom-color: var(--accent-near-black);
+        }
+
+        .form-input::placeholder {
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+
+        .pill-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .pill-btn {
+            padding: 0.6rem 1.25rem;
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            background: transparent;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: var(--text-primary);
+        }
+
+        .pill-btn:hover {
+            border-color: var(--accent-near-black);
+        }
+
+        .pill-btn.active {
+            background: var(--accent-near-black);
+            color: #FFFFFF;
+            border-color: var(--accent-near-black);
+        }
+
+        .split-fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.25rem;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            display: block;
+        }
+
+        .success-message {
+            display: none;
+            padding: 4rem 2rem;
+            background: var(--bg-warm-off-white);
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .success-message h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* -----------------------
+           FOOTER
+           ----------------------- */
+        .footer {
+            background-color: var(--accent-near-black);
+            color: #FFFFFF;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+        }
+
+        .footer-tagline {
+            color: var(--dark-section-muted);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--dark-section-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #FFFFFF;
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--dark-section-muted);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .hero .container { grid-template-columns: 1fr; text-align: center; }
+            .hero-content { margin: 0 auto; }
+            .hero-ctas { justify-content: center; }
+            .blob { width: 350px; height: 350px; }
+            .cards-row { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-links { justify-content: center; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            section { padding: 5rem 0; }
+            .hero-ctas { flex-direction: column; gap: 1rem; }
+            .cards-row { grid-template-columns: 1fr; }
+            .metrics-row { gap: 3rem; }
+            .metric-item { min-width: 45%; }
+            .split-fields { grid-template-columns: 1fr; gap: 0; }
+            .blob { width: 300px; height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hidden SVG definition for liquid glass filter effect -->
+    <svg class="svg-filters">
+        <defs>
+            <filter id="glass-blur" x="0" y="0" width="100%" height="100%" filterUnits="objectBoundingBox">
+                <feTurbulence type="fractalNoise" baseFrequency="0.003 0.007" numOctaves="1" result="turbulence" />
+                <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="200" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">
+            <strong>KGB</strong>
+            <span>Consultancy</span>
+        </a>
+        <div class="nav-links">
+            <a href="#about">Work</a>
+            <a href="#services">Services</a>
+            <a href="#thinking">Thinking</a>
+        </div>
+        <a href="#contact" class="btn btn-ghost nav-cta">Tell Me About Your Team &rarr;</a>
+    </nav>
+
+    <!-- Section 1 - Hero -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content animate-on-scroll">
+                <span class="label">Fractional Head of Sales Compensation</span>
+                <h1>Your Sales Team Is Only As Good As the Plan Behind It.</h1>
+                <p class="hero-subhead">I design sales compensation systems that align incentives, retain top performers, and turn your revenue targets into reality.</p>
+                <div class="hero-ctas">
+                    <a href="#scorecard" class="btn btn-primary">Is Your Comp Plan Working? &rarr;</a>
+                    <a href="#services" class="btn btn-ghost">See My Work &darr;</a>
+                </div>
+                <span class="hero-trust">Trusted by teams at Fivetran · Motive · Pure Storage · Block · SADA</span>
+            </div>
+            <div class="hero-visual animate-on-scroll" style="transition-delay: 0.2s;">
+                <div class="blob"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+        </div>
+    </section>
+
+    <!-- Section 2 - The Problem -->
+    <section class="problem-section" id="problem">
+        <div class="container">
+            <span class="label animate-on-scroll">Sound Familiar?</span>
+            <div class="cards-row">
+                <div class="problem-card animate-on-scroll">
+                    "Your sales team is growing faster than your comp plan can handle."
+                </div>
+                <div class="problem-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    "Reps are confused, frustrated, and quietly updating their résumés."
+                </div>
+                <div class="problem-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    "Nobody in the building actually owns this problem."
+                </div>
+            </div>
+            <p class="problem-footer animate-on-scroll">This is exactly where I come in.</p>
+        </div>
+    </section>
+
+    <!-- Section 3 - About -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <span class="label animate-on-scroll">About</span>
+            <p class="about-text animate-on-scroll">
+                I've built, rebuilt, and scaled comp programs for companies from Series A to post-IPO — across Fivetran, Motive, Pure Storage, Block, and SADA. I've managed $11M+ in compensation cycles, reduced commission disputes from 100+ open cases to 8, and cut resolution time from 60 days to 5. I know what breaks, when it breaks, and exactly how to fix it.
+            </p>
+            <div class="logo-strip animate-on-scroll">
+                <span class="logo-item">Fivetran</span>
+                <span class="logo-item" style="font-weight: 300; font-size: 1.5rem;">|</span>
+                <span class="logo-item">Motive</span>
+                <span class="logo-item" style="font-weight: 300; font-size: 1.5rem;">|</span>
+                <span class="logo-item">Pure Storage</span>
+                <span class="logo-item" style="font-weight: 300; font-size: 1.5rem;">|</span>
+                <span class="logo-item">Block</span>
+                <span class="logo-item" style="font-weight: 300; font-size: 1.5rem;">|</span>
+                <span class="logo-item">SADA</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4 - Services -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <span class="label animate-on-scroll">How I Work With You</span>
+            <div class="cards-row">
+                <!-- Service 1 -->
+                <div class="glass-card animate-on-scroll">
+                    <div class="glass-inner-edge"></div>
+                    <div class="service-content">
+                        <span class="service-num">01</span>
+                        <h3 class="service-title">Comp Plan Audit</h3>
+                        <p class="service-desc">Not sure if your plan is working? I'll diagnose it. You get a full written assessment of your current plan's strengths, risks, and gaps — with specific recommendations. Fast, focused, and actionable.</p>
+                        <span class="service-tag">Starting at $2,500</span>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="glass-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="glass-inner-edge"></div>
+                    <div class="service-content">
+                        <span class="service-num">02</span>
+                        <h3 class="service-title">Comp Plan Design</h3>
+                        <p class="service-desc">Building or rebuilding from scratch. I design the full comp architecture — plan types, OTE structure, quota methodology, accelerators, and documentation — aligned to your GTM motion and growth stage.</p>
+                        <span class="service-tag">Project-based pricing</span>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="glass-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="glass-inner-edge"></div>
+                    <div class="service-content">
+                        <span class="service-num">03</span>
+                        <h3 class="service-title">Fractional Retainer</h3>
+                        <p class="service-desc">Ongoing comp leadership without the full-time hire. Monthly hours for plan management, Xactly administration, rep questions, and strategic adjustments as your team evolves.</p>
+                        <span class="service-tag">Monthly retainer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5 - Proof -->
+    <section class="proof-section" id="proof">
+        <div class="container">
+            <span class="label animate-on-scroll" style="color: var(--dark-section-muted)">By The Numbers</span>
+            <div class="metrics-row">
+                <div class="metric-item animate-on-scroll">
+                    <div class="metric-val">1,400+</div>
+                    <div class="metric-label">payees managed</div>
+                </div>
+                <div class="metric-item animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="metric-val">over $11M</div>
+                    <div class="metric-label">comp cycles owned</div>
+                </div>
+                <div class="metric-item animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="metric-val">100 &rarr; 8</div>
+                    <div class="metric-label">open disputes</div>
+                </div>
+                <div class="metric-item animate-on-scroll" style="transition-delay: 0.3s;">
+                    <div class="metric-val">60 days &rarr; 5</div>
+                    <div class="metric-label">resolution time</div>
+                </div>
+                <div class="metric-item animate-on-scroll" style="transition-delay: 0.4s;">
+                    <div class="metric-val">40%</div>
+                    <div class="metric-label">headcount reduction via automation</div>
+                </div>
+            </div>
+            <p class="proof-footer animate-on-scroll">I don't just design comp plans. I build the infrastructure that makes them run without breaking.</p>
+        </div>
+    </section>
+
+    <!-- Section 6 - Scorecard CTA -->
+    <section class="scorecard-section" id="scorecard">
+        <div class="container">
+            <div class="scorecard-content animate-on-scroll">
+                <h2>Is Your Comp Plan Working?</h2>
+                <p>Answer 12 questions and get a free personalized assessment of your comp plan's health — including your biggest risks and where to start fixing them.</p>
+                <a href="#contact" class="btn btn-primary">Get My Free Score &rarr;</a>
+                <span class="scorecard-note">Takes 5 minutes. No sales call required.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7 - Latest Thinking -->
+    <section class="articles-section" id="thinking">
+        <div class="container">
+            <span class="label animate-on-scroll">Latest Thinking</span>
+            <div class="cards-row">
+                <!-- Article 1 -->
+                <a href="#" class="article-card animate-on-scroll">
+                    <span class="label">Comp Strategy</span>
+                    <h3 class="article-title">The Silent Revenue Killer Most Sales Leaders Never See Coming</h3>
+                    <p class="article-desc">How a misaligned comp plan quietly redirects your best reps' effort.</p>
+                    <span class="article-link">Read on LinkedIn &rarr;</span>
+                </a>
+                <!-- Article 2 -->
+                <a href="#" class="article-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <span class="label">GTM Alignment</span>
+                    <h3 class="article-title">When Your GTM Changes But Your Comp Plan Doesn't</h3>
+                    <p class="article-desc">The lag between strategy shifts and incentive updates is costing you selling time.</p>
+                    <span class="article-link">Read on LinkedIn &rarr;</span>
+                </a>
+                <!-- Article 3 -->
+                <a href="#" class="article-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <span class="label">Retention</span>
+                    <h3 class="article-title">Why Your Top Performer Is Updating Their Résumé Right Now</h3>
+                    <p class="article-desc">Comp transparency is a retention strategy. Here's what that looks like in practice.</p>
+                    <span class="article-link">Read on LinkedIn &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8 - Contact Form -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Left Details -->
+                <div class="contact-left animate-on-scroll">
+                    <span class="label">Tell Me About Your Team</span>
+                    <h2>If comp is keeping you up at night — let's talk.</h2>
+                    <p>Fill out a few quick details and I'll be in touch within one business day.</p>
+                    <div class="trust-signals">
+                        <div class="trust-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Free 30-min discovery call
+                        </div>
+                        <div class="trust-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            No commitment required
+                        </div>
+                        <div class="trust-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Response within 1 business day
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Form -->
+                <div class="contact-right animate-on-scroll" style="transition-delay: 0.2s;">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">Company name & current team size</label>
+                            <input type="text" id="companyName" class="form-input" placeholder="Acme Inc. · ~25 reps" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">What's happening right now?</label>
+                            <div class="pill-group" id="pillGroup">
+                                <button type="button" class="pill-btn">We have no formal comp plan yet</button>
+                                <button type="button" class="pill-btn">Our plan exists but reps are unhappy</button>
+                                <button type="button" class="pill-btn">We're scaling and need to rebuild</button>
+                                <button type="button" class="pill-btn">We need ongoing comp support</button>
+                                <button type="button" class="pill-btn">Not sure — I need a diagnosis</button>
+                            </div>
+                            <input type="hidden" id="selectedIssue" required>
+                        </div>
+
+                        <div class="split-fields">
+                            <div class="form-group">
+                                <label class="form-label">Your name</label>
+                                <input type="text" id="userName" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Your email</label>
+                                <input type="email" id="userEmail" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-btn">Let's Talk &rarr;</button>
+                        <span class="form-note">Your information is never shared or sold.</span>
+                    </form>
+
+                    <div id="successState" class="success-message">
+                        <h3>Thanks <span id="successName"></span>!</h3>
+                        <p>I'll be in touch within one business day.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    Kelly Gill-Braxton
+                </div>
+                <div class="footer-tagline">
+                    Fractional Sales Compensation Leadership for High-Growth Companies.
+                </div>
+                <div class="footer-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="mailto:#">Email</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Kelly Gill-Braxton. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Intersection Observer for fade-up animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // 2. Navbar shrink/blur on scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 3. Contact Form Pill Selection Logic
+            const pillBtns = document.querySelectorAll('.pill-btn');
+            const hiddenInput = document.getElementById('selectedIssue');
+
+            pillBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active from all
+                    pillBtns.forEach(b => b.classList.remove('active'));
+                    // Add active to clicked
+                    btn.classList.add('active');
+                    // Set hidden input value
+                    hiddenInput.value = btn.innerText;
+                });
+            });
+
+            // 4. Form Submit Handler mock
+            const form = document.getElementById('contactForm');
+            const successState = document.getElementById('successState');
+            const successName = document.getElementById('successName');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Validate pill selection
+                if(!hiddenInput.value) {
+                    alert("Please select what's happening right now.");
+                    return;
+                }
+
+                const nameInput = document.getElementById('userName').value;
+                const firstName = nameInput.split(' ')[0]; // use first name for friendly vibe
+
+                // Hide form, show success
+                form.style.display = 'none';
+                successState.style.display = 'block';
+                successName.innerText = firstName;
+            });
+        });
+    </script>
+</body>
+</html>
