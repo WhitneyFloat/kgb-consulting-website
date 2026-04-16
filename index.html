@@ -21,6 +21,8 @@
             --dark-section-text: #FFFFFF;
             --dark-section-muted: #A0A0A0;
             --border-color: rgba(15, 15, 15, 0.1);
+            --pill-bg: #1A1A1A;
+            --pill-text: #FFFFFF;
             
             /* Gradients */
             --gradient-pink: #F5C6D0;
@@ -654,6 +656,137 @@
         }
 
         /* -----------------------
+           SECTION: SEE MY WORK / CASE STUDIES
+           ----------------------- */
+        .work-section {
+            background-color: #FFFFFF;
+        }
+
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .case-study-card {
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            background: #FFFFFF;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .case-study-card:hover {
+            border-color: var(--accent-near-black);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+
+        .case-study-card .situation-line {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .case-study-card h3 {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            max-width: 90%;
+        }
+
+        .case-study-card .card-body-preview {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .case-study-card.expanded .card-body-preview {
+            display: block;
+            -webkit-line-clamp: unset;
+        }
+
+        .case-study-card .card-full-content {
+            display: none;
+            opacity: 0;
+            max-height: 0;
+            transition: all 0.5s ease;
+        }
+
+        .case-study-card.expanded .card-full-content {
+            display: block;
+            opacity: 1;
+            max-height: 2000px;
+            margin-top: 1rem;
+        }
+
+        .outcome-block {
+            background-color: var(--pill-bg);
+            color: var(--pill-text);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .outcome-block ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .outcome-block li {
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .case-study-card .bottom-tag {
+            margin-top: auto;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+        }
+
+        .expand-btn {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--accent-near-black);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .expand-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .case-study-card.expanded .expand-btn svg {
+            transform: rotate(180deg);
+        }
+
+        /* -----------------------
            SECTION 8 - CONTACT
            ----------------------- */
         .contact-section {
@@ -854,6 +987,7 @@
             .hero-ctas { justify-content: center; }
             .blob { width: 350px; height: 350px; }
             .cards-row { grid-template-columns: repeat(2, 1fr); }
+            .case-study-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; gap: 4rem; }
             .footer-grid { grid-template-columns: 1fr; text-align: center; }
             .footer-links { justify-content: center; }
@@ -896,11 +1030,11 @@
             <span>Consultancy</span>
         </a>
         <button class="mobile-menu-btn" id="menuBtn"><span></span><span></span></button><div class="nav-links">
-            <a href="#about">Work</a>
+            <a href="#work">Work</a>
             <a href="#services">Services</a>
             <a href="#thinking">Thinking</a>
         </div>
-        <a href="#contact" class="btn btn-ghost nav-cta">Tell Me About Your Team &rarr;</a>
+        <a href="mailto:kgillbraxtion@gmail.com" class="btn btn-ghost nav-cta">Tell Me About Your Team &rarr;</a>
     </nav>
 
     <!-- Section 1 - Hero -->
@@ -912,7 +1046,7 @@
                 <p class="hero-subhead">I design sales compensation systems that align incentives, retain top performers, and turn your revenue targets into reality.</p>
                 <div class="hero-ctas">
                     <a href="#scorecard" class="btn btn-primary">Is Your Comp Plan Working? &rarr;</a>
-                    <a href="#services" class="btn btn-ghost">See My Work &darr;</a>
+                    <a href="#work" class="btn btn-ghost">See My Work &darr;</a>
                 </div>
                 <span class="hero-trust">Trusted by teams at Fivetran · Motive · Pure Storage · Block · SADA</span>
             </div>
@@ -944,23 +1078,101 @@
         </div>
     </section>
 
-    <!-- Section 3 - About -->
-    <section class="about-section" id="about">
+    <!-- Section 2.5 - See My Work (Case Studies) -->
+    <section class="work-section" id="work">
         <div class="container">
-            <span class="label animate-on-scroll">About</span>
-            <p class="about-text animate-on-scroll">
-                I've built, rebuilt, and scaled comp programs for companies from Series A to post-IPO — across Fivetran, Motive, Pure Storage, Block, and SADA. I've managed $11M+ in compensation cycles, reduced commission disputes from 100+ open cases to 8, and cut resolution time from 60 days to 5. I know what breaks, when it breaks, and exactly how to fix it.
-            </p>
-            <div class="logo-strip animate-on-scroll">
-                <span class="logo-item">Fivetran</span>
-                <span class="logo-item" style="font-weight: 300; font-size: 1.5rem;">|</span>
-                <span class="logo-item">Motive</span>
-                <span class="logo-item" style="font-weight: 300; font-size: 1.5rem;">|</span>
-                <span class="logo-item">Pure Storage</span>
-                <span class="logo-item" style="font-weight: 300; font-size: 1.5rem;">|</span>
-                <span class="logo-item">Block</span>
-                <span class="logo-item" style="font-weight: 300; font-size: 1.5rem;">|</span>
-                <span class="logo-item">SADA</span>
+            <span class="label animate-on-scroll">See My Work</span>
+            <div class="case-study-grid">
+                <!-- Case Study 01 -->
+                <div class="case-study-card animate-on-scroll" onclick="this.classList.toggle('expanded')">
+                    <span class="label" style="margin-bottom: 0.5rem;">COMP PLAN AUDIT · SERIES B SAAS</span>
+                    <span class="situation-line">45-rep sales team · Inherited broken Xactly implementation · 90+ open disputes</span>
+                    <h3>"They Knew Something Was Wrong. They Didn't Know How Wrong."</h3>
+                    
+                    <div class="card-body-preview">
+                        A Series B SaaS company came to me six months after a rapid sales team expansion. Reps were frustrated, finance was overwhelmed, and leadership couldn't explain why attainment had dropped 22% despite hiring aggressively.
+                    </div>
+                    
+                    <button class="expand-btn">Read Case Study <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                    
+                    <div class="card-full-content">
+                        <p class="article-desc" style="color: var(--text-primary); margin-bottom: 1.5rem;">
+                            Nobody had looked at the comp plan holistically since the Series A. Within two weeks I completed a full audit of their plan architecture, Xactly configuration, quota-setting methodology, and payout history. 
+                        </p>
+                        <p class="article-desc" style="color: var(--text-primary); margin-bottom: 1.5rem;">
+                            What I found: three separate plan design flaws that were actively demotivating mid-tier performers, a quota model that was set 31% above market for their stage, and 90+ open commission disputes that had been sitting unresolved for an average of 47 days.
+                        </p>
+                        
+                        <div class="outcome-block">
+                            <ul>
+                                <li><strong>&rarr;</strong> Dispute backlog cleared from 90+ to 6 within 45 days</li>
+                                <li><strong>&rarr;</strong> Quota realignment increased attainment from 38% to 61% of team hitting plan</li>
+                                <li><strong>&rarr;</strong> Full written findings report delivered in 11 business days</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bottom-tag">Engagement type: Comp Plan Audit · Duration: 2 weeks</div>
+                </div>
+
+                <!-- Case Study 02 -->
+                <div class="case-study-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <span class="label" style="margin-bottom: 0.5rem;">COMP PLAN DESIGN · SCALE-UP</span>
+                    <span class="situation-line">New GTM Motion · Transitioning to Enterprise focus</span>
+                    <h3>Building a Scalable Architecture for Growth.</h3>
+                    <div class="card-body-preview">
+                        Coming soon: How we designed a new comp architecture to support a shift from SMB to Enterprise selling.
+                    </div>
+                    <div class="bottom-tag">Engagement type: Comp Plan Design</div>
+                </div>
+
+                <!-- Case Study 03 -->
+                <div class="case-study-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <span class="label" style="margin-bottom: 0.5rem;">FRACTIONAL LEADERSHIP · SERIES C</span>
+                    <span class="situation-line">Ongoing Administration · Team Evolution</span>
+                    <h3>Sustaining Performance Through Change.</h3>
+                    <div class="card-body-preview">
+                        Coming soon: A look at fractional retainer results and multi-cycle management.
+                    </div>
+                    <div class="bottom-tag">Engagement type: Fractional Retainer</div>
+                </div>
+
+                <!-- Case Study 04 -->
+                <div class="case-study-card animate-on-scroll" onclick="this.classList.toggle('expanded')" style="transition-delay: 0.3s;">
+                    <span class="label" style="margin-bottom: 0.5rem;">COMP PLAN REDESIGN · ENTERPRISE SALES · 100-REP TEAM</span>
+                    <span class="situation-line">OTE $150K–$200K · 70/30 pay mix · bi-annual payout cycle</span>
+                    <h3>"The Plan Was Paying People. It Wasn't Driving the Right Behaviors."</h3>
+                    
+                    <div class="card-body-preview">
+                        An enterprise sales team of 100 reps was operating on a legacy comp structure built for a different stage of the business. The 70/30 base/variable split was too conservative to motivate high performance.
+                    </div>
+
+                    <button class="expand-btn">Read Case Study <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+
+                    <div class="card-full-content">
+                        <p class="article-desc" style="color: var(--text-primary); margin-bottom: 1.5rem;">
+                            KPI weighting at 40% was diluting the revenue signal. And bi-annual payout timing was disconnecting effort from reward in a business where deals take months to close.
+                        </p>
+                        <p class="article-desc" style="color: var(--text-primary); margin-bottom: 1.5rem;">
+                            The redesign shifted pay mix to 50/50 — holding OTE constant — restructured quota/KPI weighting to 90/10 to make revenue the dominant outcome, and moved to quarterly payouts to create faster feedback loops.
+                        </p>
+                        <p class="article-desc" style="color: var(--text-primary); margin-bottom: 1.5rem;">
+                            Every structural change was modeled across the full attainment distribution before recommendation, and a complete communication and change management plan was built alongside the design.
+                        </p>
+                        
+                        <div class="outcome-block">
+                            <ul>
+                                <li><strong>&rarr;</strong> 75 of 100 reps gain pay under proposed plan — avg +$9,400</li>
+                                <li><strong>&rarr;</strong> Net comp investment of $599K (+3.5% total spend) fully modeled and justified</li>
+                                <li><strong>&rarr;</strong> 106% average quota attainment with 60 of 100 reps above target</li>
+                                <li><strong>&rarr;</strong> Full 5-phase communication plan delivered with leadership, manager, and rep-level rollout sequences</li>
+                                <li><strong>&rarr;</strong> Attrition risk for 25 affected reps identified and mitigated with structured coaching framework</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bottom-tag">Engagement type: Comp Plan Redesign · Population: 100 Enterprise AEs · OTE: $150K–$200K</div>
+                </div>
             </div>
         </div>
     </section>
@@ -1156,8 +1368,8 @@
                     Fractional Sales Compensation Leadership for High-Growth Companies.
                 </div>
                 <div class="footer-links">
-                    <a href="#">LinkedIn</a>
-                    <a href="mailto:#">Email</a>
+                    <a href="https://www.linkedin.com/in/kellygill-braxton/" target="_blank">LinkedIn</a>
+                    <a href="mailto:kgillbraxtion@gmail.com">Email</a>
                 </div>
             </div>
             <div class="footer-bottom">
