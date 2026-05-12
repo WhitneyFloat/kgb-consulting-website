@@ -427,7 +427,6 @@
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             overflow: hidden;
             z-index: 1;
-            /* Default base appearance */
         }
         
         .glass-card::before {
@@ -437,7 +436,7 @@
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
-            filter: url(#glass-blur); /* The magic SVG noise */
+            filter: url(#glass-blur);
             z-index: -2;
             opacity: 0;
             transition: opacity 0.5s ease;
@@ -1129,7 +1128,7 @@
         <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
         <nav>
             <ul class="mobile-menu-nav">
-                <li><a href="#about" class="mobile-menu-link">Work</a></li>
+                <li><a href="#work" class="mobile-menu-link">Work</a></li>
                 <li><a href="#services" class="mobile-menu-link">Services</a></li>
                 <li><a href="#proof" class="mobile-menu-link">Results</a></li>
                 <li><a href="#thinking" class="mobile-menu-link">Thinking</a></li>
@@ -1149,7 +1148,7 @@
                     <a href="#scorecard" class="btn btn-primary">Is Your Comp Plan Working? &rarr;</a>
                     <a href="#work" class="btn btn-ghost">See My Work &darr;</a>
                 </div>
-                <span class="hero-trust" style="display:none;">Trusted by teams at Fivetran · Motive · Pure Storage · Block · SADA</span>
+                <span class="hero-trust" style="display:none;">Trusted by teams at Fivetran &middot; Motive &middot; Pure Storage &middot; Block &middot; SADA</span>
             </div>
             <div class="hero-visual animate-on-scroll" style="transition-delay: 0.2s;">
                 <div class="blob"></div>
@@ -1166,13 +1165,13 @@
             <span class="label animate-on-scroll">Sound Familiar?</span>
             <div class="cards-row">
                 <div class="problem-card animate-on-scroll">
-                    "Your sales team is growing faster than your comp plan can handle."
+                    &ldquo;Your sales team is growing faster than your comp plan can handle.&rdquo;
                 </div>
                 <div class="problem-card animate-on-scroll" style="transition-delay: 0.1s;">
-                    "Reps are confused, frustrated, and quietly updating their résumés."
+                    &ldquo;Reps are confused, frustrated, and quietly updating their r&eacute;sum&eacute;s.&rdquo;
                 </div>
                 <div class="problem-card animate-on-scroll" style="transition-delay: 0.2s;">
-                    "Nobody in the building actually owns this problem."
+                    &ldquo;Nobody in the building actually owns this problem.&rdquo;
                 </div>
             </div>
             <p class="problem-footer animate-on-scroll">This is exactly where I come in.</p>
@@ -1186,12 +1185,12 @@
             <div class="case-study-grid">
                 <!-- Case Study 01 -->
                 <div class="case-study-card animate-on-scroll" onclick="this.classList.toggle('expanded')">
-                    <span class="label" style="margin-bottom: 0.5rem;">COMP PLAN AUDIT · SERIES B SAAS</span>
-                    <span class="situation-line">45-rep sales team · Inherited over engineered internal ICM tool · 90+ open commission disputes</span>
-                    <h3>"They Knew Something Was Wrong. They Didn't Know How Wrong."</h3>
+                    <span class="label" style="margin-bottom: 0.5rem;">COMP PLAN AUDIT &middot; SERIES B SAAS</span>
+                    <span class="situation-line">45-rep sales team &middot; Inherited over engineered internal ICM tool &middot; 90+ open commission disputes</span>
+                    <h3>&ldquo;They Knew Something Was Wrong. They Didn&rsquo;t Know How Wrong.&rdquo;</h3>
                     
                     <div class="card-body-preview">
-                        A Series B SaaS company came to me six months after a rapid sales team expansion. Reps were frustrated, finance was overwhelmed, and leadership couldn't explain why attainment had dropped 22% despite hiring aggressively.
+                        A Series B SaaS company came to me six months after a rapid sales team expansion. Reps were frustrated, finance was overwhelmed, and leadership couldn&rsquo;t explain why attainment had dropped 22% despite hiring aggressively.
                     </div>
                     
                     <button class="expand-btn">Read Case Study <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
@@ -1213,14 +1212,14 @@
                         </div>
                     </div>
                     
-                    <div class="bottom-tag">Engagement type: Comp Plan Audit · Duration: 2 weeks</div>
+                    <div class="bottom-tag">Engagement type: Comp Plan Audit &middot; Duration: 2 weeks</div>
                 </div>
 
                 <!-- Case Study 02 -->
                 <div class="case-study-card animate-on-scroll" onclick="this.classList.toggle('expanded')" style="transition-delay: 0.1s;">
-                    <span class="label" style="margin-bottom: 0.5rem;">COMP PLAN DESIGN · SERIES A FINTECH</span>
-                    <span class="situation-line">12-rep sales team · No formal comp plan · Compensation negotiated deal-by-deal</span>
-                    <h3>"They Were Paying People. They Weren't Running a Comp Program."</h3>
+                    <span class="label" style="margin-bottom: 0.5rem;">COMP PLAN DESIGN &middot; SERIES A FINTECH</span>
+                    <span class="situation-line">12-rep sales team &middot; No formal comp plan &middot; Compensation negotiated deal-by-deal</span>
+                    <h3>&ldquo;They Were Paying People. They Weren&rsquo;t Running a Comp Program.&rdquo;</h3>
                     
                     <div class="card-body-preview">
                         A Series A fintech company had closed their first enterprise deals and was preparing to triple their sales headcount over 18 months. Every rep had negotiated their own compensation individually at hire.
@@ -1242,21 +1241,21 @@
                         <div class="outcome-block">
                             <ul>
                                 <li><strong>&rarr;</strong> Full comp architecture designed and documented in 6 weeks</li>
-                                <li><strong>&rarr;</strong> OTE benchmarked across 4 role types — AE, SDR, Sales Manager, Solutions Engineer</li>
+                                <li><strong>&rarr;</strong> OTE benchmarked across 4 role types &mdash; AE, SDR, Sales Manager, Solutions Engineer</li>
                                 <li><strong>&rarr;</strong> Accelerator structure drove 94% of reps to above-quota performance in first full quarter</li>
                                 <li><strong>&rarr;</strong> Zero comp disputes in first 12 months post-implementation</li>
                             </ul>
                         </div>
                     </div>
                     
-                    <div class="bottom-tag">Engagement type: Comp Plan Design · Duration: 6 weeks</div>
+                    <div class="bottom-tag">Engagement type: Comp Plan Design &middot; Duration: 6 weeks</div>
                 </div>
 
                 <!-- Case Study 03 -->
                 <div class="case-study-card animate-on-scroll" onclick="this.classList.toggle('expanded')" style="transition-delay: 0.2s;">
-                    <span class="label" style="margin-bottom: 0.5rem;">FRACTIONAL RETAINER · SERIES C ENTERPRISE SAAS</span>
-                    <span class="situation-line">200+ rep sales team · Rapid international expansion · No dedicated comp function</span>
-                    <h3>"They Needed a Head of Comp. They Weren't Ready to Hire One Full-Time."</h3>
+                    <span class="label" style="margin-bottom: 0.5rem;">FRACTIONAL RETAINER &middot; SERIES C ENTERPRISE SAAS</span>
+                    <span class="situation-line">200+ rep sales team &middot; Rapid international expansion &middot; No dedicated comp function</span>
+                    <h3>&ldquo;They Needed a Head of Comp. They Weren&rsquo;t Ready to Hire One Full-Time.&rdquo;</h3>
                     
                     <div class="card-body-preview">
                         A Series C company had scaled from 40 to 200+ quota-carrying reps across North America and two international regions in under 24 months. Their comp plan had been patched along the way but never properly rebuilt.
@@ -1266,7 +1265,7 @@
 
                     <div class="card-full-content">
                         <p class="article-desc" style="color: var(--text-primary); margin-bottom: 1.5rem;">
-                            Finance was managing commissions manually in spreadsheets. The RevOps team was fielding comp questions they weren't equipped to answer. I came on as their Fractional Head of Sales Compensation on a monthly retainer.
+                            Finance was managing commissions manually in spreadsheets. The RevOps team was fielding comp questions they weren&rsquo;t equipped to answer. I came on as their Fractional Head of Sales Compensation on a monthly retainer.
                         </p>
                         <p class="article-desc" style="color: var(--text-primary); margin-bottom: 1.5rem;">
                             In the first 90 days I rebuilt the core plan architecture for all four sales roles, migrated their commission operations from manual spreadsheets to a fully configured Xactly implementation, and established clear payout milestones.
@@ -1278,21 +1277,21 @@
                         <div class="outcome-block">
                             <ul>
                                 <li><strong>&rarr;</strong> Commission processing time reduced from 11 days to 3 days per cycle</li>
-                                <li><strong>&rarr;</strong> Manual spreadsheet process fully eliminated — Xactly live within 90 days</li>
+                                <li><strong>&rarr;</strong> Manual spreadsheet process fully eliminated &mdash; Xactly live within 90 days</li>
                                 <li><strong>&rarr;</strong> Inbound comp questions to RevOps reduced by 80%</li>
                                 <li><strong>&rarr;</strong> Comp infrastructure scaled from 200 to 340 reps without a rebuild</li>
                             </ul>
                         </div>
                     </div>
                     
-                    <div class="bottom-tag">Engagement type: Fractional Retainer · Duration: 12 months ongoing</div>
+                    <div class="bottom-tag">Engagement type: Fractional Retainer &middot; Duration: 12 months ongoing</div>
                 </div>
 
                 <!-- Case Study 04 -->
                 <div class="case-study-card animate-on-scroll" onclick="this.classList.toggle('expanded')" style="transition-delay: 0.3s;">
-                    <span class="label" style="margin-bottom: 0.5rem;">COMP PLAN REDESIGN · ENTERPRISE SALES · 100-REP TEAM</span>
-                    <span class="situation-line">OTE $150K–$200K · 70/30 pay mix · bi-annual payout cycle</span>
-                    <h3>"The Plan Was Paying People. It Wasn't Driving the Right Behaviors."</h3>
+                    <span class="label" style="margin-bottom: 0.5rem;">COMP PLAN REDESIGN &middot; ENTERPRISE SALES &middot; 100-REP TEAM</span>
+                    <span class="situation-line">OTE $150K&ndash;$200K &middot; 70/30 pay mix &middot; bi-annual payout cycle</span>
+                    <h3>&ldquo;The Plan Was Paying People. It Wasn&rsquo;t Driving the Right Behaviors.&rdquo;</h3>
                     
                     <div class="card-body-preview">
                         An enterprise sales team of 100 reps was operating on a legacy comp structure built for a different stage of the business. The 70/30 base/variable split was too conservative to motivate high performance.
@@ -1305,7 +1304,7 @@
                             KPI weighting at 40% was diluting the revenue signal. And bi-annual payout timing was disconnecting effort from reward in a business where deals take months to close.
                         </p>
                         <p class="article-desc" style="color: var(--text-primary); margin-bottom: 1.5rem;">
-                            The redesign shifted pay mix to 50/50 — holding OTE constant — restructured quota/KPI weighting to 90/10 to make revenue the dominant outcome, and moved to quarterly payouts to create faster feedback loops.
+                            The redesign shifted pay mix to 50/50 &mdash; holding OTE constant &mdash; restructured quota/KPI weighting to 90/10 to make revenue the dominant outcome, and moved to quarterly payouts to create faster feedback loops.
                         </p>
                         <p class="article-desc" style="color: var(--text-primary); margin-bottom: 1.5rem;">
                             Every structural change was modeled across the full attainment distribution before recommendation, and a complete communication and change management plan was built alongside the design.
@@ -1313,7 +1312,7 @@
                         
                         <div class="outcome-block">
                             <ul>
-                                <li><strong>&rarr;</strong> 75 of 100 reps gain pay under proposed plan — avg +$9,400</li>
+                                <li><strong>&rarr;</strong> 75 of 100 reps gain pay under proposed plan &mdash; avg +$9,400</li>
                                 <li><strong>&rarr;</strong> Net comp investment of $599K (+3.5% total spend) fully modeled and justified</li>
                                 <li><strong>&rarr;</strong> 106% average quota attainment with 60 of 100 reps above target</li>
                                 <li><strong>&rarr;</strong> Full 5-phase communication plan delivered with leadership, manager, and rep-level rollout sequences</li>
@@ -1322,7 +1321,7 @@
                         </div>
                     </div>
                     
-                    <div class="bottom-tag">Engagement type: Comp Plan Redesign · Population: 100 Enterprise AEs · OTE: $150K–$200K</div>
+                    <div class="bottom-tag">Engagement type: Comp Plan Redesign &middot; Population: 100 Enterprise AEs &middot; OTE: $150K&ndash;$200K</div>
                 </div>
             </div>
         </div>
@@ -1339,7 +1338,7 @@
                     <div class="service-content">
                         <span class="service-num">01</span>
                         <h3 class="service-title">Comp Plan Audit</h3>
-                        <p class="service-desc">Not sure if your plan is working? I'll diagnose it. You get a full written assessment of your current plan's strengths, risks, and gaps — with specific recommendations. Fast, focused, and actionable.</p>
+                        <p class="service-desc">Not sure if your plan is working? I&rsquo;ll diagnose it. You get a full written assessment of your current plan&rsquo;s strengths, risks, and gaps &mdash; with specific recommendations. Fast, focused, and actionable.</p>
                         <a href="https://gtm-comp-platform-vercel.vercel.app/diagnostic" class="btn btn-ghost" style="margin-top: 2rem; width: 100%;">Start Self-Audit &rarr;</a>
                     </div>
                 </div>
@@ -1393,7 +1392,7 @@
                     <div class="metric-label">headcount reduction via automation</div>
                 </div>
             </div>
-            <p class="proof-footer animate-on-scroll">I don't just design comp plans. I build the infrastructure that makes them run without breaking.</p>
+            <p class="proof-footer animate-on-scroll">I don&rsquo;t just design comp plans. I build the infrastructure that makes them run without breaking.</p>
         </div>
     </section>
 
@@ -1402,7 +1401,7 @@
         <div class="container">
             <div class="scorecard-content animate-on-scroll">
                 <h2>Is Your Comp Plan Working?</h2>
-                <p>Answer 12 questions and get a free personalized assessment of your comp plan's health — including your biggest risks and where to start fixing them.</p>
+                <p>Answer 12 questions and get a free personalized assessment of your comp plan&rsquo;s health &mdash; including your biggest risks and where to start fixing them.</p>
                 <a href="https://gtm-comp-platform-vercel.vercel.app/diagnostic" class="btn btn-primary">Get My Free Score &rarr;</a>
                 <span class="scorecard-note">Takes 5 minutes. No sales call required.</span>
             </div>
@@ -1418,21 +1417,21 @@
                 <a href="#" class="article-card animate-on-scroll">
                     <span class="label">Comp Strategy</span>
                     <h3 class="article-title">The Silent Revenue Killer Most Sales Leaders Never See Coming</h3>
-                    <p class="article-desc">How a misaligned comp plan quietly redirects your best reps' effort.</p>
+                    <p class="article-desc">How a misaligned comp plan quietly redirects your best reps&rsquo; effort.</p>
                     <span class="article-link">Publishing Soon</span>
                 </a>
                 <!-- Article 2 -->
                 <a href="#" class="article-card animate-on-scroll" style="transition-delay: 0.1s;">
                     <span class="label">GTM Alignment</span>
-                    <h3 class="article-title">When Your GTM Changes But Your Comp Plan Doesn't</h3>
+                    <h3 class="article-title">When Your GTM Changes But Your Comp Plan Doesn&rsquo;t</h3>
                     <p class="article-desc">The lag between strategy shifts and incentive updates is costing you selling time.</p>
                     <span class="article-link">Publishing Soon</span>
                 </a>
                 <!-- Article 3 -->
-                <a href="#" class="article-card animate-on-scroll" style="transition-delay: 0.2s;">
+                <a href="https://www.linkedin.com/posts/gill-gtm-partners_salescompensation-salesleadership-gtm-activity-7458603401984225280-kKk9?utm_source=share&utm_medium=member_ios&rcm=ACoAACgIOS4BQAg-qCOxc-iSkmLgKCzMnLyQjSg" target="_blank" class="article-card animate-on-scroll" style="transition-delay: 0.2s;">
                     <span class="label">Retention</span>
-                    <h3 class="article-title">Why Your Top Performer Is Updating Their Résumé Right Now</h3>
-                    <p class="article-desc">Comp transparency is a retention strategy. Here's what that looks like in practice.</p>
+                    <h3 class="article-title">You Think You Know What Your Best Rep Earns. You Probably Don&rsquo;t.</h3>
+                    <p class="article-desc">The reps most likely to leave quietly aren&rsquo;t the ones you&rsquo;d expect. They&rsquo;re your 90&ndash;120% attainers &mdash; performing well enough to have options, and calculating carefully enough to know when to use them.</p>
                     <span class="article-link">Read on LinkedIn &rarr;</span>
                 </a>
             </div>
@@ -1446,8 +1445,8 @@
                 <!-- Left Details -->
                 <div class="contact-left animate-on-scroll">
                     <span class="label">Tell Me About Your Team</span>
-                    <h2>If comp is keeping you up at night, let's talk.</h2>
-                    <p>Fill out a few quick details and I'll be in touch within one business day.</p>
+                    <h2>If comp is keeping you up at night, let&rsquo;s talk.</h2>
+                    <p>Fill out a few quick details and I&rsquo;ll be in touch within one business day.</p>
                     <div class="trust-signals">
                         <div class="trust-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1467,18 +1466,18 @@
                 <div class="contact-right animate-on-scroll" style="transition-delay: 0.2s;">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label class="form-label">Company name & current team size</label>
-                            <input type="text" id="companyName" class="form-input" placeholder="Acme Inc. · ~25 reps" required>
+                            <label class="form-label">Company name &amp; current team size</label>
+                            <input type="text" id="companyName" class="form-input" placeholder="Acme Inc. &middot; ~25 reps" required>
                         </div>
                         
                         <div class="form-group">
-                            <label class="form-label">What's happening right now?</label>
+                            <label class="form-label">What&rsquo;s happening right now?</label>
                             <div class="pill-group" id="pillGroup">
                                 <button type="button" class="pill-btn">We have no formal comp plan yet</button>
                                 <button type="button" class="pill-btn">Our plan exists but reps are unhappy</button>
-                                <button type="button" class="pill-btn">We're scaling and need to rebuild</button>
+                                <button type="button" class="pill-btn">We&rsquo;re scaling and need to rebuild</button>
                                 <button type="button" class="pill-btn">We need ongoing comp support</button>
-                                <button type="button" class="pill-btn">Not sure — I need a diagnosis</button>
+                                <button type="button" class="pill-btn">Not sure &mdash; I need a diagnosis</button>
                             </div>
                             <input type="hidden" id="selectedIssue" required>
                         </div>
@@ -1494,13 +1493,13 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary submit-btn">Let's Talk &rarr;</button>
+                        <button type="submit" class="btn btn-primary submit-btn">Let&rsquo;s Talk &rarr;</button>
                         <span class="form-note">Your information is never shared or sold.</span>
                     </form>
 
                     <div id="successState" class="success-message">
                         <h3>Thanks <span id="successName"></span>!</h3>
-                        <p>I'll be in touch within one business day.</p>
+                        <p>I&rsquo;ll be in touch within one business day.</p>
                     </div>
                 </div>
             </div>
@@ -1600,16 +1599,13 @@
 
             pillBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Remove active from all
                     pillBtns.forEach(b => b.classList.remove('active'));
-                    // Add active to clicked
                     btn.classList.add('active');
-                    // Set hidden input value
                     hiddenInput.value = btn.innerText;
                 });
             });
 
-            // 4. Form Submit Handler mock
+            // 4. Form Submit Handler
             const form = document.getElementById('contactForm');
             const successState = document.getElementById('successState');
             const successName = document.getElementById('successName');
@@ -1617,7 +1613,6 @@
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 
-                // Validate pill selection
                 if(!hiddenInput.value) {
                     alert("Please select what's happening right now.");
                     return;
@@ -1630,7 +1625,7 @@
 
                 const nameInput = document.getElementById('userName').value;
                 const emailInput = document.getElementById('userEmail').value;
-                const companyInput = document.getElementById('userCompany').value;
+                const companyInput = document.getElementById('userCompany') ? document.getElementById('userCompany').value : '';
                 const issueValue = hiddenInput.value;
 
                 try {
