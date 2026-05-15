@@ -1,12 +1,14 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/app",
-      "destination": "https://gtm-comp-platform-vercel.vercel.app/diagnostic"
+      "destination": "https://gtm-comp-platform-vercel.vercel.app/diagnostic",
+      "permanent": false
     },
     {
       "source": "/app/:path*",
-      "destination": "https://gtm-comp-platform-vercel.vercel.app/:path*"
+      "destination": "https://gtm-comp-platform-vercel.vercel.app/:path*",
+      "permanent": false
     }
   ]
 }
