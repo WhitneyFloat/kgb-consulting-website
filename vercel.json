@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/app",
-      "destination": "https://gtm-comp-platform-vercel.vercel.app"
+      "destination": "https://gtm-comp-platform-vercel.vercel.app/diagnostic"
     },
     {
       "source": "/app/:path*",
